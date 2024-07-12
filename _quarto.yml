@@ -1,13 +1,15 @@
 project:
   type: website
+  output-dir: docs
 
 website:
-  title: "TEST WEBSITE"
+  title: "PORTPOLIO_Youna"
   navbar:
     left:
       - href: index.qmd
         text: Home
       - about.qmd
+      - test.qmd
 
 format:
   html:

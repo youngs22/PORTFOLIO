@@ -1,9 +1,9 @@
 ---
-title: "TEST WEBSITE"
+title: "PORTFOLIO_Youna"
 jupyter: python3
 ---
 
-This is a Quarto website.
+"안녕하세요,  유나의 포트폴리오 홈페이지에 오신 것을 환영합니다."
 
 To learn more about Quarto websites visit <https://quarto.org/docs/websites>.
 
