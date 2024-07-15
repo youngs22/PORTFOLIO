@@ -1,0 +1,27 @@
+---
+title: "homework1"
+jupyter: python3
+---
+
+2024-07-15
+
+```{python}
+import pandas as pd
+x=pd.DataFrame({"제품":["사과","딸기","수박"],
+"가격":[1800,1500,3000],
+"판매량":[24,38,13]})
+print("가격 평균 : ",sum(x["가격"])/3)
+print("판매량 평균 : ",sum(x["판매량"])/3)
+```
+
+
+```{python}
+import numpy as np
+import pydataset
+df=pydataset.data('mtcars')
+df_mpg=np.array(df["mpg"])
+
+
+
+```
+

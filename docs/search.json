@@ -12,5 +12,12 @@
     "title": "LS 빅데이터 스쿨",
     "section": "",
     "text": "SHOW this site"
+  },
+  {
+    "objectID": "hw1.html",
+    "href": "hw1.html",
+    "title": "homework1",
+    "section": "",
+    "text": "2024-07-15\n\nimport pandas as pd\nx=pd.DataFrame({\"제품\":[\"사과\",\"딸기\",\"수박\"],\n\"가격\":[1800,1500,3000],\n\"판매량\":[24,38,13]})\nprint(\"가격 평균 : \",sum(x[\"가격\"])/3)\nprint(\"판매량 평균 : \",sum(x[\"판매량\"])/3)\n\n가격 평균 :  2100.0\n판매량 평균 :  25.0\n\n\n\nimport numpy as np\nimport pydataset\ndf=pydataset.data('mtcars')\ndf_mpg=np.array(df[\"mpg\"])"
   }
 ]
