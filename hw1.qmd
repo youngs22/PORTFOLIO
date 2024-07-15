@@ -3,8 +3,9 @@ title: "homework1"
 jupyter: python3
 ---
 
-2024-07-15
+                                                                                         2024-07-15
 
+#### 84 page
 ```{python}
 import pandas as pd
 x=pd.DataFrame({"제품":["사과","딸기","수박"],
@@ -15,13 +16,82 @@ print("판매량 평균 : ",sum(x["판매량"])/3)
 ```
 
 
+
+#### 115 page
+```{python}
+import pandas as pd
+import pydataset
+df=pd.read_csv("mpg.csv")
+df_mpg=df.copy()
+
+df_mpg=df_mpg.rename(columns={"cty":"city"})
+df_mpg=df_mpg.rename(columns={"hwy":"highway"})
+df_mpg
+```
+
+#### 130 page
+##### Q1.
+```{python}
+import pandas as pd
+import pydataset
+
+df_midwest=pd.read_csv('midwest.csv')
+df_midwest.head()
+df_midwest.tail()
+df_midwest.shape
+df_midwest.info()
+df_midwest.describe()
+
+```
+
+
+
+
+##### Q2.
+```{python}
+
+df_midwest=df_midwest.rename(columns={"poptotal":"total"})
+df_midwest=df_midwest.rename(columns={"popasian":"asian"})
+df_midwest[["total","asian"]]
+
+```
+
+
+##### Q3.
+```{python}
+df_midwest["asian_ptg"]= df_midwest["asian"] / df_midwest["total"] * 100
+df_midwest
+```
+
+
+##### Q4.
 ```{python}
 import numpy as np
-import pydataset
-df=pydataset.data('mtcars')
-df_mpg=np.array(df["mpg"])
+
+asian_ptg_mean= sum(df_midwest["asian_ptg"])/437
+df_midwest["large_small"]=np.where(df_midwest["asian_ptg"] > asian_ptg_mean, "large", "small")
+df_midwest
+```
 
 
+##### Q5.
+```{python}
+import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt
+
+plt.clf()
+large_small_count = df_midwest["large_small"].value_counts()
+large_small_count.plot.bar(rot=0,color="red")
+plt.show()
+
+# 또다른 그래프 만드는 방법
+import seaborn as sns
+import matplotlib.pyplot as plt
+
+plt.clf()
+sns.countplot(data=df_midwest, x="large_small", color="yellow", dodge=True)
+plt.show()
 
 ```
 
