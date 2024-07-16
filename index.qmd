@@ -1,6 +1,10 @@
 ---
 title: "PORTFOLIO_Youna"
 jupyter: python3
+toc: false
+about:
+    id: hero-heading
+    template: jolla
 ---
 
 "안녕하세요,  유나의 [포트폴리오 홈페이지](https://youngs22.github.io/PORTFOLIO/)에 오신 것을 환영합니다."
