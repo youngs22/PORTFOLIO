@@ -1,0 +1,97 @@
+---
+title: "homework2"
+jupyter: python3
+---
+
+                                                                           2024-07-16
+## 144 page
+#### Q1
+```{python}
+import pandas as pd
+import pydataset
+
+mpg = pydataset.data("mpg")
+
+mpg.head()
+
+displ4 =mpg.query("displ<=4")
+displ5 =mpg.query("displ>=5")
+
+displ4["hwy"].mean()
+displ5["hwy"].mean()
+
+displ5["hwy"].mean() < displ4["hwy"].mean()
+
+```
+
+#### Q2
+```{python}
+mpg_audi = mpg.query("manufacturer == 'audi'")
+mpg_toyota =mpg.query("manufacturer == 'toyota'")
+
+
+mpg_audi["cty"].mean()
+mpg_toyota["cty"].mean()
+
+mpg_audi["cty"].mean() < mpg_toyota["cty"].mean()
+
+```
+
+#### Q3
+```{python}
+mpg2=mpg.query("manufacturer=='chevrolet'|manufacturer=='ford'|manufacturer=='honda'")
+mpg2["hwy"].mean()
+```
+
+## 153 page
+#### Q1
+```{python}
+mpg_audi = mpg.query("manufacturer=='audi'")
+mpg_audi.sort_values("hwy",ascending = False).head()
+```
+
+## 158 page
+#### Q1
+```{python}
+import pandas as pd
+import pydataset
+
+mpg = pydataset.data("mpg")
+
+mpg_copy = mpg.copy()
+mpg_copy
+
+mpg_copy = mpg_copy.assign(sum_cty_hwy = mpg_copy["cty"] + mpg_copy["hwy"])
+mpg_copy.head()
+
+```
+
+#### Q2
+```{python}
+mpg_copy = mpg_copy.assign(mean_cty_hwy = mpg_copy["sum_cty_hwy"] / 2)
+mpg_copy
+```
+
+#### Q3
+```{python}
+mpg_copy.sort_values("mean_cty_hwy", ascending = False).head(3)
+```
+
+#### Q4
+```{python}
+mpg.assign(
+    sum_cty_hwy = mpg["cty"] + mpg["hwy"],
+    mean_cty_hwy = mpg["cty"] + mpg["hwy"] / 2 )\
+    .sort_values("mean_cty_hwy", ascending = False)\
+    .head(3)
+```
+
+#### Q4 또 다르게
+```{python}
+mpg.assign(
+    total = lambda x: x["cty"] + x["hwy"],
+    mean_cty_hwy = lambda x: x["total"] / 2 )\
+    .sort_values("mean_cty_hwy", ascending = False)\
+    .head(3)
+```
+
