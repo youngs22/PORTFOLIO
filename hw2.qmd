@@ -3,7 +3,7 @@ title: "homework2"
 jupyter: python3
 ---
 
-                                                                           2024-07-16
+                                                         2024-07-16
 ## 144 page
 #### Q1
 ```{python}
