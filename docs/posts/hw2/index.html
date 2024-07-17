@@ -6,6 +6,7 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="author" content="youna">
 <meta name="dcterms.date" content="2024-07-16">
 
 <title>PORTPOLIO_Youna - LS 빅데이터 스쿨 homework2</title>
@@ -159,6 +160,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   
   <div class="quarto-title-meta">
 
+      <div>
+      <div class="quarto-title-meta-heading">Author</div>
+      <div class="quarto-title-meta-contents">
+               <p>youna </p>
+            </div>
+    </div>
       
       <div>
       <div class="quarto-title-meta-heading">Published</div>
@@ -196,7 +203,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <h2 class="anchored" data-anchor-id="page">144 page</h2>
 <section id="q1." class="level4">
 <h4 class="anchored" data-anchor-id="q1.">Q1.</h4>
-<div id="c9713278" class="cell" data-execution_count="1">
+<div id="2541eed9" class="cell" data-execution_count="1">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pydataset</span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -218,7 +225,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="q2." class="level4">
 <h4 class="anchored" data-anchor-id="q2.">Q2.</h4>
-<div id="0c8fb1a8" class="cell" data-execution_count="2">
+<div id="f1725010" class="cell" data-execution_count="2">
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>mpg_audi <span class="op">=</span> mpg.query(<span class="st">"manufacturer == 'audi'"</span>)</span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>mpg_toyota <span class="op">=</span>mpg.query(<span class="st">"manufacturer == 'toyota'"</span>)</span>
 <span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -234,7 +241,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="q3." class="level4">
 <h4 class="anchored" data-anchor-id="q3.">Q3.</h4>
-<div id="992e4e84" class="cell" data-execution_count="3">
+<div id="fbfd8fdb" class="cell" data-execution_count="3">
 <div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>mpg2<span class="op">=</span>mpg.query(<span class="st">"manufacturer=='chevrolet'|manufacturer=='ford'|manufacturer=='honda'"</span>)</span>
 <span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>mpg2[<span class="st">"hwy"</span>].mean()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="3">
@@ -247,7 +254,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <h2 class="anchored" data-anchor-id="page-1">153 page</h2>
 <section id="q1.-1" class="level4">
 <h4 class="anchored" data-anchor-id="q1.-1">Q1.</h4>
-<div id="f22e8c99" class="cell" data-execution_count="4">
+<div id="7b42cce3" class="cell" data-execution_count="4">
 <div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>mpg_audi <span class="op">=</span> mpg.query(<span class="st">"manufacturer=='audi'"</span>)</span>
 <span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>mpg_audi.sort_values(<span class="st">"hwy"</span>,ascending <span class="op">=</span> <span class="va">False</span>).head()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="4">
@@ -354,7 +361,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <h2 class="anchored" data-anchor-id="page-2">158 page</h2>
 <section id="q1.-2" class="level4">
 <h4 class="anchored" data-anchor-id="q1.-2">Q1.</h4>
-<div id="0a7acd3f" class="cell" data-execution_count="5">
+<div id="047eb634" class="cell" data-execution_count="5">
 <div class="sourceCode cell-code" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
 <span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pydataset</span>
 <span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -472,7 +479,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="q2.-1" class="level4">
 <h4 class="anchored" data-anchor-id="q2.-1">Q2.</h4>
-<div id="30a039e7" class="cell" data-execution_count="6">
+<div id="13fd1737" class="cell" data-execution_count="6">
 <div class="sourceCode cell-code" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>mpg_copy <span class="op">=</span> mpg_copy.assign(mean_cty_hwy <span class="op">=</span> mpg_copy[<span class="st">"sum_cty_hwy"</span>] <span class="op">/</span> <span class="dv">2</span>)</span>
 <span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>mpg_copy</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="6">
@@ -685,7 +692,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="q3.-1" class="level4">
 <h4 class="anchored" data-anchor-id="q3.-1">Q3.</h4>
-<div id="1f1a0f01" class="cell" data-execution_count="7">
+<div id="c3624096" class="cell" data-execution_count="7">
 <div class="sourceCode cell-code" id="cb10"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>mpg_copy.sort_values(<span class="st">"mean_cty_hwy"</span>, ascending <span class="op">=</span> <span class="va">False</span>).head(<span class="dv">3</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="7">
 <div>
@@ -768,7 +775,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="q4." class="level4">
 <h4 class="anchored" data-anchor-id="q4.">Q4.</h4>
-<div id="71d056a7" class="cell" data-execution_count="8">
+<div id="3d88f667" class="cell" data-execution_count="8">
 <div class="sourceCode cell-code" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>mpg.assign(</span>
 <span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>    sum_cty_hwy <span class="op">=</span> mpg[<span class="st">"cty"</span>] <span class="op">+</span> mpg[<span class="st">"hwy"</span>],</span>
 <span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a>    mean_cty_hwy <span class="op">=</span> mpg[<span class="st">"cty"</span>] <span class="op">+</span> mpg[<span class="st">"hwy"</span>] <span class="op">/</span> <span class="dv">2</span> )<span class="op">\</span></span>
@@ -855,7 +862,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="q4.-책대로" class="level4">
 <h4 class="anchored" data-anchor-id="q4.-책대로">Q4. (책대로)</h4>
-<div id="371e6706" class="cell" data-execution_count="9">
+<div id="1f473425" class="cell" data-execution_count="9">
 <div class="sourceCode cell-code" id="cb12"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>mpg.assign(</span>
 <span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>    total <span class="op">=</span> <span class="kw">lambda</span> x: x[<span class="st">"cty"</span>] <span class="op">+</span> x[<span class="st">"hwy"</span>],</span>
 <span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a>    mean_cty_hwy <span class="op">=</span> <span class="kw">lambda</span> x: x[<span class="st">"total"</span>] <span class="op">/</span> <span class="dv">2</span> )<span class="op">\</span></span>
