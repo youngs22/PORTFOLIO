@@ -196,13 +196,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <h2 class="anchored" data-anchor-id="page">84 page</h2>
 <section id="q1." class="level4">
 <h4 class="anchored" data-anchor-id="q1.">Q1.</h4>
-<div id="ec897fa9" class="cell" data-execution_count="1">
+<div id="eb3de8ea" class="cell" data-execution_count="1">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>x<span class="op">=</span>pd.DataFrame({<span class="st">"제품"</span>:[<span class="st">"사과"</span>,<span class="st">"딸기"</span>,<span class="st">"수박"</span>],</span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>                <span class="st">"가격"</span>:[<span class="dv">1800</span>,<span class="dv">1500</span>,<span class="dv">3000</span>],</span>
 <span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>                <span class="st">"판매량"</span>:[<span class="dv">24</span>,<span class="dv">38</span>,<span class="dv">13</span>]})</span>
 <span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>x</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="33">
+<div class="cell-output cell-output-display" data-execution_count="41">
 <div>
 
 
@@ -243,7 +243,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="q2." class="level4">
 <h4 class="anchored" data-anchor-id="q2.">Q2.</h4>
-<div id="d9a18f27" class="cell" data-execution_count="2">
+<div id="84b46318" class="cell" data-execution_count="2">
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"가격 평균 : "</span>,<span class="bu">sum</span>(x[<span class="st">"가격"</span>])<span class="op">/</span><span class="dv">3</span>)</span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"판매량 평균 : "</span>,<span class="bu">sum</span>(x[<span class="st">"판매량"</span>])<span class="op">/</span><span class="dv">3</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
@@ -255,7 +255,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="page-1" class="level2">
 <h2 class="anchored" data-anchor-id="page-1">115 page</h2>
-<div id="dd1a5cb3" class="cell" data-execution_count="3">
+<div id="98aba74c" class="cell" data-execution_count="3">
 <div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
 <span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pydataset</span>
 <span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>df<span class="op">=</span>pd.read_csv(<span class="st">"C:/Users/USER/Documents/LS빅데이터스쿨/PORTFOLIO/data/mpg.csv"</span>)</span>
@@ -264,7 +264,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>df_mpg<span class="op">=</span>df_mpg.rename(columns<span class="op">=</span>{<span class="st">"cty"</span>:<span class="st">"city"</span>})</span>
 <span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a>df_mpg<span class="op">=</span>df_mpg.rename(columns<span class="op">=</span>{<span class="st">"hwy"</span>:<span class="st">"highway"</span>})</span>
 <span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a>df_mpg</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="35">
+<div class="cell-output cell-output-display" data-execution_count="43">
 <div>
 
 
@@ -452,7 +452,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <h2 class="anchored" data-anchor-id="page-2">130 page</h2>
 <section id="q1.-1" class="level4">
 <h4 class="anchored" data-anchor-id="q1.-1">Q1.</h4>
-<div id="3a652083" class="cell" data-execution_count="4">
+<div id="f70ba925" class="cell" data-execution_count="4">
 <div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
 <span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pydataset</span>
 <span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -499,7 +499,7 @@ Data columns (total 28 columns):
 dtypes: float64(15), int64(10), object(3)
 memory usage: 95.7+ KB</code></pre>
 </div>
-<div class="cell-output cell-output-display" data-execution_count="36">
+<div class="cell-output cell-output-display" data-execution_count="44">
 <div>
 
 
@@ -733,11 +733,11 @@ memory usage: 95.7+ KB</code></pre>
 </section>
 <section id="q2.-1" class="level4">
 <h4 class="anchored" data-anchor-id="q2.-1">Q2.</h4>
-<div id="f511101c" class="cell" data-execution_count="5">
+<div id="5bf4a5f6" class="cell" data-execution_count="5">
 <div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>df_midwest<span class="op">=</span>df_midwest.rename(columns<span class="op">=</span>{<span class="st">"poptotal"</span>:<span class="st">"total"</span>})</span>
 <span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>df_midwest<span class="op">=</span>df_midwest.rename(columns<span class="op">=</span>{<span class="st">"popasian"</span>:<span class="st">"asian"</span>})</span>
 <span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>df_midwest[[<span class="st">"total"</span>,<span class="st">"asian"</span>]]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="37">
+<div class="cell-output cell-output-display" data-execution_count="45">
 <div>
 
 
@@ -815,10 +815,10 @@ memory usage: 95.7+ KB</code></pre>
 </section>
 <section id="q3." class="level4">
 <h4 class="anchored" data-anchor-id="q3.">Q3.</h4>
-<div id="b02b0646" class="cell" data-execution_count="6">
+<div id="65809114" class="cell" data-execution_count="6">
 <div class="sourceCode cell-code" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>df_midwest[<span class="st">"asian_ptg"</span>]<span class="op">=</span> df_midwest[<span class="st">"asian"</span>] <span class="op">/</span> df_midwest[<span class="st">"total"</span>] <span class="op">*</span> <span class="dv">100</span></span>
 <span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>df_midwest</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="38">
+<div class="cell-output cell-output-display" data-execution_count="46">
 <div>
 
 
@@ -1124,13 +1124,13 @@ memory usage: 95.7+ KB</code></pre>
 </section>
 <section id="q4." class="level4">
 <h4 class="anchored" data-anchor-id="q4.">Q4.</h4>
-<div id="06627bc6" class="cell" data-execution_count="7">
+<div id="ff10a70c" class="cell" data-execution_count="7">
 <div class="sourceCode cell-code" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
 <span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>asian_ptg_mean<span class="op">=</span> <span class="bu">sum</span>(df_midwest[<span class="st">"asian_ptg"</span>])<span class="op">/</span><span class="dv">437</span></span>
 <span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a>df_midwest[<span class="st">"large_small"</span>]<span class="op">=</span>np.where(df_midwest[<span class="st">"asian_ptg"</span>] <span class="op">&gt;</span> asian_ptg_mean, <span class="st">"large"</span>, <span class="st">"small"</span>)</span>
 <span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a>df_midwest</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="39">
+<div class="cell-output cell-output-display" data-execution_count="47">
 <div>
 
 
@@ -1436,7 +1436,7 @@ memory usage: 95.7+ KB</code></pre>
 </section>
 <section id="q5." class="level4">
 <h4 class="anchored" data-anchor-id="q5.">Q5.</h4>
-<div id="6b630358" class="cell" data-execution_count="8">
+<div id="1ed1672c" class="cell" data-execution_count="8">
 <div class="sourceCode cell-code" id="cb10"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
 <span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
 <span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
