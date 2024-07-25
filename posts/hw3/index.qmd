@@ -61,7 +61,6 @@ norm.cdf(3, loc=2, scale=3) + (1-norm.cdf(7, loc=2, scale=3))
 # 평균이 30이고, 분산이 4인 정규분포
 # 상위 5%에 해당하는 학생 점수는?
 
-x=np.arange(28)
 score = norm.ppf(0.95, loc=30, scale=2)
 score
 ```
