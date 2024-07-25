@@ -1,0 +1,60 @@
+---
+title: "LS 빅데이터 스쿨 homework3"
+jupyter: python3
+date: "2024-07-25"
+author: "youna"
+categories: [bigdata]
+---
+## Q1.
+```{python}
+# 정규분포 pdf 값을 계산하는 자신만의
+# 파이썬 함수를 정의하고, 
+# 정규분포 mu = 3, sigma = 2 의 pdf를 그릴 것.
+import math
+import numpy as np
+import matplotlib.pyplot as plt
+
+
+k = np.linspace(-100000000, 100000000, 100)
+
+def normal_pdf(x, mu, sigma):
+    part1=(sigma * (math.sqrt(2*math.pi)))**-1
+    part2=(-(x-mu)**2/(2*sigma**2))
+    return part1 * part2
+
+y = normal_pdf(k, mu=3, sigma=2)
+plt.plot(k, y, color="pink")
+plt.show()
+plt.clf()
+
+```
+
+## Q2.
+```{python}
+# 파이썬 scipy 패키지 사용해서 다음과 같은 확률을 구하시오.
+# X ~ N(2, 3^2)
+
+from scipy.stats import norm
+
+#1 P(X < 3)
+norm.cdf(3, loc=2, scale=3)
+
+#2 P(2 < X < 5)
+norm.cdf(5, loc=2, scale=3) - norm.cdf(2, loc=2, scale=3)
+
+#3 P(X < 3 or X > 7)
+norm.cdf(3, loc=2, scale=3) + (1-norm.cdf(7, loc=2, scale=3))
+
+```
+
+## Q3.
+```{python}
+# LS빅데이터 스쿨 학생들의 중간고사 점수는 
+# 평균이 30이고, 분산이 4인 정규분포
+# 상위 5%에 해당하는 학생 수는?
+
+x=np.arange(28)
+k = norm.pdf(x, loc=30, scale=2)
+sum(k>0.01645)
+```
+

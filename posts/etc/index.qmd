@@ -1,0 +1,74 @@
+---
+title: "LS 빅데이터 스쿨 homework_etc"
+jupyter: python3
+date: "2024-07-22"
+author: "youna"
+categories: [bigdata]
+---
+### 패키지 및 파일 불러오기
+```{python}
+import pandas as pd
+import seaborn as sns
+import matplotlib.pyplot as plt
+import plotly.express as px
+
+mpg = pd.read_csv("C:/Users/USER/Documents/LS빅데이터스쿨/LsBigdata-project1/data/mpg.csv")
+
+exam = pd.read_csv("C:/Users/USER/Documents/LS빅데이터스쿨/LsBigdata-project1/data/exam.csv")
+
+midwest = pd.read_csv("C:/Users/USER/Documents/LS빅데이터스쿨/LsBigdata-project1/data/midwest.csv")
+```
+
+
+
+## 204 page
+### Q1.
+```{python}
+plt.clf()
+sns.scatterplot(data=mpg, x="cty", y="hwy")
+plt.show()
+```
+
+### Q2.
+```{python}
+plt.clf()
+sns.scatterplot(data=midwest, x="poptotal", y="popasian")\
+    .set(xlim = [0,500000], ylim = [0,10000])
+plt.show()
+```
+
+
+## 211 page
+### Q1.
+```{python}
+mpg_suv = mpg.query("category == 'suv'")
+mpg2=mpg_suv.groupby("manufacturer", as_index = False)\
+             .agg(cty_mean=("cty","mean"))
+mpg2=mpg2.sort_values("cty_mean", ascending=False).head(5)
+plt.clf()
+sns.barplot(data=mpg2, x="manufacturer", y="cty_mean", hue="manufacturer")
+plt.show()
+```
+
+### Q2.
+```{python}
+mpg3=mpg.groupby("category", as_index = False)\
+             .agg(n=("category","count"))
+mpg3=mpg3.sort_values("n", ascending=False)     
+plt.clf()
+sns.barplot(data=mpg3, x="category", y="n", hue="category")
+plt.show()
+```
+
+
+
+## 316 page
+### mpg데이터 활용
+```{python}
+px.scatter(data_frame=mpg, x="cty", y="hwy", color="drv")
+```
+
+### exam데이터 활용
+```{python}
+px.scatter(data_frame=exam, x="nclass", y="math", color="nclass")
+```
