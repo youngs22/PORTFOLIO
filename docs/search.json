@@ -165,7 +165,7 @@
     "href": "posts/hw3/index.html#q3.",
     "title": "LS 빅데이터 스쿨 homework3",
     "section": "Q3.",
-    "text": "Q3.\n\n# LS빅데이터 스쿨 학생들의 중간고사 점수는 \n# 평균이 30이고, 분산이 4인 정규분포\n# 상위 5%에 해당하는 학생 수는?\n\nx=np.arange(28)\nk = norm.pdf(x, loc=30, scale=2)\nsum(k&gt;0.01645)\n\nnp.int64(2)"
+    "text": "Q3.\n\n# LS빅데이터 스쿨 학생들의 중간고사 점수는 \n# 평균이 30이고, 분산이 4인 정규분포\n# 상위 5%에 해당하는 학생 점수는?\n\nx=np.arange(28)\nscore = norm.ppf(0.95, loc=30, scale=2)\nscore\n\nnp.float64(33.28970725390295)"
   },
   {
     "objectID": "posts/hw3인줄 알았던것.html",
