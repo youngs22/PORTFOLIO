@@ -10,16 +10,19 @@ categories: [bigdata]
 # 정규분포 pdf 값을 계산하는 자신만의
 # 파이썬 함수를 정의하고, 
 # 정규분포 mu = 3, sigma = 2 의 pdf를 그릴 것.
+# 정규분포 pdf 값을 계산하는 자신만의
+# 파이썬 함수를 정의하고, 
+# 정규분포 mu = 3, sigma = 2 의 pdf를 그릴 것.
 import math
 import numpy as np
 import matplotlib.pyplot as plt
 
 
-k = np.linspace(-100000000, 100000000, 100)
+k = np.linspace(-4, 10, 100)
 
 def normal_pdf(x, mu, sigma):
-    part1=(sigma * (math.sqrt(2*math.pi)))**-1
-    part2=(-(x-mu)**2/(2*sigma**2))
+    part1=(sigma * (math.sqrt(2*math.pi)))**(-1)
+    part2=np.exp(-(x-mu)**2/(2*sigma**2))
     return part1 * part2
 
 y = normal_pdf(k, mu=3, sigma=2)
@@ -38,14 +41,19 @@ from scipy.stats import norm
 
 #1 P(X < 3)
 norm.cdf(3, loc=2, scale=3)
-
+```
+```{python}
 #2 P(2 < X < 5)
 norm.cdf(5, loc=2, scale=3) - norm.cdf(2, loc=2, scale=3)
 
+```
+
+```{python}
 #3 P(X < 3 or X > 7)
 norm.cdf(3, loc=2, scale=3) + (1-norm.cdf(7, loc=2, scale=3))
-
 ```
+
+
 
 ## Q3.
 ```{python}
