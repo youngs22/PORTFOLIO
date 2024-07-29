@@ -1,0 +1,83 @@
+---
+title: "LS 빅데이터 스쿨 homework4"
+jupyter: python3
+date: "2024-07-29"
+author: "youna"
+categories: [bigdata]
+---
+## 균일분포 (3, 7)에서 20개의 표본을 뽑아서 분산을 2가지 방법으로 추정해보세요.
+## Q1. n-1로 나눈 것을 s_2, n으로 나눈 것을 k_2로 정의하고, s_2의 분포와 k_2의 분포를 그려주세요! (10000개 사용)
+```{python}
+import numpy as np
+from scipy.stats import norm
+import matplotlib.pyplot as plt
+
+np.random.seed(20240729)
+x_values = np.linspace(-16, 24, 10000)
+x = norm.rvs(loc=3, scale=7, size=20)
+
+k_2 = np.var(x, ddof=0) # n으로 나눈 값
+k_2
+```
+
+```{python}
+import numpy as np
+from scipy.stats import norm
+import matplotlib.pyplot as plt
+
+np.random.seed(20240729)
+x_values = np.linspace(-16, 24, 10000)
+x = norm.rvs(loc=3, scale=7, size=20)
+
+s_2 = np.var(x, ddof=1) # n-1로 나눈 값
+s_2
+```
+
+```{python}
+import numpy as np
+from scipy.stats import norm
+import matplotlib.pyplot as plt
+
+np.random.seed(20240729)
+x_values = np.linspace(-16, 24, 10000)
+x = norm.rvs(loc=3, scale=7, size=20)
+
+k_2 = np.var(x, ddof=0) # n으로 나눈 값
+s_2 = np.var(x, ddof=1) # n-1로 나눈 값
+
+pdf_values1 = norm.pdf(x_values, loc=3, scale=np.sqrt(k_2))
+pdf_values2 = norm.pdf(x_values, loc=3, scale=np.sqrt(s_2))
+plt.plot(x_values, pdf_values1, color="black", linewidth=2) #n
+plt.plot(x_values, pdf_values2, color="blue", linewidth=2) #n-1
+plt.show()
+plt.clf()
+```
+
+## Q2. 각 분포 그래프에 모분산의 위치에 녹색 막대를 그려주세요.
+```{python}
+import numpy as np
+from scipy.stats import norm
+import matplotlib.pyplot as plt
+
+np.random.seed(20240729)
+x_values = np.linspace(-16, 24, 10000)
+x = norm.rvs(loc=3, scale=7, size=20)
+
+k_2 = np.var(x, ddof=0) # n으로 나눈 값
+s_2 = np.var(x, ddof=1) # n-1로 나눈 값
+x_mean = x.mean()
+
+pdf_values1 = norm.pdf(x_values, loc=3, scale=np.sqrt(k_2))
+pdf_values2 = norm.pdf(x_values, loc=3, scale=np.sqrt(s_2))
+plt.plot(x_values, pdf_values1, color="black", linewidth=2) #n
+plt.plot(x_values, pdf_values2, color="blue", linewidth=2) #n-1
+plt.axvline(x_mean, color='green', linestyle="--", linewidth=1, label='Mean')
+plt.show()
+plt.clf()
+
+```
+
+## Q3. 결과를 살펴보고, 왜 n-1로 나눈 것을 분산을 추정하는 지표로 사용하는 것이 타당한지 써주세요!
+n-1로 나눈 모분산의 그래프(파란선)이 모평균에 더 가깝기 때문에
+n-1로 나눈 것을 분산으로 추정하는 지표로 사용하는 것이 타당하다.
+

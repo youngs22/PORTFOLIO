@@ -60,7 +60,7 @@
     "href": "blog.html",
     "title": "Blog",
     "section": "",
-    "text": "LS 빅데이터 스쿨 homework3\n\n\n\n\n\n\nbigdata\n\n\n\n\n\n\n\n\n\nJul 25, 2024\n\n\nyouna\n\n\n\n\n\n\n\n\n\n\n\n\nLS 빅데이터 스쿨 homework_etc\n\n\n\n\n\n\nbigdata\n\n\n\n\n\n\n\n\n\nJul 22, 2024\n\n\nyouna\n\n\n\n\n\n\n\n\n\n\n\n\nLS 빅데이터 스쿨 homework2\n\n\n\n\n\n\nbigdata\n\n\n\n\n\n\n\n\n\nJul 16, 2024\n\n\nyouna\n\n\n\n\n\n\n\n\n\n\n\n\nLS 빅데이터 스쿨 homework1\n\n\n\n\n\n\nbigdata\n\n\n\n\n\n\n\n\n\nJul 15, 2024\n\n\nyouna\n\n\n\n\n\n\nNo matching items"
+    "text": "LS 빅데이터 스쿨 homework4\n\n\n\n\n\n\nbigdata\n\n\n\n\n\n\n\n\n\nJul 29, 2024\n\n\nyouna\n\n\n\n\n\n\n\n\n\n\n\n\nLS 빅데이터 스쿨 homework3\n\n\n\n\n\n\nbigdata\n\n\n\n\n\n\n\n\n\nJul 25, 2024\n\n\nyouna\n\n\n\n\n\n\n\n\n\n\n\n\nLS 빅데이터 스쿨 homework_etc\n\n\n\n\n\n\nbigdata\n\n\n\n\n\n\n\n\n\nJul 22, 2024\n\n\nyouna\n\n\n\n\n\n\n\n\n\n\n\n\nLS 빅데이터 스쿨 homework2\n\n\n\n\n\n\nbigdata\n\n\n\n\n\n\n\n\n\nJul 16, 2024\n\n\nyouna\n\n\n\n\n\n\n\n\n\n\n\n\nLS 빅데이터 스쿨 homework1\n\n\n\n\n\n\nbigdata\n\n\n\n\n\n\n\n\n\nJul 15, 2024\n\n\nyouna\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "posts/hw1/index.html",
@@ -222,5 +222,54 @@
     "title": "LS 빅데이터 스쿨 homework_etc",
     "section": "316 page",
     "text": "316 page\n\nmpg데이터 활용\n\npx.scatter(data_frame=mpg, x=\"cty\", y=\"hwy\", color=\"drv\")\n\n                                                \n\n\n\n\nexam데이터 활용\n\npx.scatter(data_frame=exam, x=\"nclass\", y=\"math\", color=\"nclass\")"
+  },
+  {
+    "objectID": "posts/hw4/index.html#q1.-n-1로-나눈-것을-s_2-n으로-나눈-것을-k_2로-정의하고-s_2의-분포와-k_2의-분포를-그려주세요",
+    "href": "posts/hw4/index.html#q1.-n-1로-나눈-것을-s_2-n으로-나눈-것을-k_2로-정의하고-s_2의-분포와-k_2의-분포를-그려주세요",
+    "title": "LS 빅데이터 스쿨 homework4",
+    "section": "Q1. n-1로 나눈 것을 s_2, n으로 나눈 것을 k_2로 정의하고, s_2의 분포와 k_2의 분포를 그려주세요!",
+    "text": "Q1. n-1로 나눈 것을 s_2, n으로 나눈 것을 k_2로 정의하고, s_2의 분포와 k_2의 분포를 그려주세요!"
+  },
+  {
+    "objectID": "posts/hw4/index.html#개-사용",
+    "href": "posts/hw4/index.html#개-사용",
+    "title": "LS 빅데이터 스쿨 homework4",
+    "section": "",
+    "text": "import numpy as np\nfrom scipy.stats import norm\nimport matplotlib.pyplot as plt\n\nnp.random.seed(20240729)\nx_values = np.linspace(-16, 24, 10000)\nx = norm.rvs(loc=3, scale=7, size=20)\n\nk_2 = np.var(x, ddof=0) # n으로 나눈 값\ns_2 = np.var(x, ddof=1) # n-1로 나눈 값\n\npdf_values1 = norm.pdf(x_values, loc=3, scale=np.sqrt(k_2))\npdf_values2 = norm.pdf(x_values, loc=3, scale=np.sqrt(s_2))\nplt.plot(x_values, pdf_values1, color=\"black\", linewidth=2) #n\nplt.plot(x_values, pdf_values2, color=\"blue\", linewidth=2) #n-1\nplt.show()\nplt.clf()\n\n\n\n\n\n\n\n\n&lt;Figure size 672x480 with 0 Axes&gt;"
+  },
+  {
+    "objectID": "posts/hw4/index.html#q2.-각-분포-그래프에-모분산의-위치에-녹색-막대를-그려주세요.",
+    "href": "posts/hw4/index.html#q2.-각-분포-그래프에-모분산의-위치에-녹색-막대를-그려주세요.",
+    "title": "LS 빅데이터 스쿨 homework4",
+    "section": "Q2. 각 분포 그래프에 모분산의 위치에 녹색 막대를 그려주세요.",
+    "text": "Q2. 각 분포 그래프에 모분산의 위치에 녹색 막대를 그려주세요.\n\nimport numpy as np\nfrom scipy.stats import norm\nimport matplotlib.pyplot as plt\n\nnp.random.seed(20240729)\nx_values = np.linspace(-16, 24, 10000)\nx = norm.rvs(loc=3, scale=7, size=20)\n\nk_2 = np.var(x, ddof=0) # n으로 나눈 값\ns_2 = np.var(x, ddof=1) # n-1로 나눈 값\nx_mean = x.mean()\n\npdf_values1 = norm.pdf(x_values, loc=3, scale=np.sqrt(k_2))\npdf_values2 = norm.pdf(x_values, loc=3, scale=np.sqrt(s_2))\nplt.plot(x_values, pdf_values1, color=\"black\", linewidth=2) #n\nplt.plot(x_values, pdf_values2, color=\"blue\", linewidth=2) #n-1\nplt.axvline(x_mean, color='green', linestyle=\"--\", linewidth=1, label='Mean')\nplt.show()\nplt.clf()\n\n\n\n\n\n\n\n\n&lt;Figure size 672x480 with 0 Axes&gt;"
+  },
+  {
+    "objectID": "posts/hw4/index.html#결과를-살펴보고-왜-n-1로-나눈-것을-분산을-추정하는-지표로-사용하는-것이-타당한지-써주세요",
+    "href": "posts/hw4/index.html#결과를-살펴보고-왜-n-1로-나눈-것을-분산을-추정하는-지표로-사용하는-것이-타당한지-써주세요",
+    "title": "LS 빅데이터 스쿨 homework4",
+    "section": "결과를 살펴보고, 왜 n-1로 나눈 것을 분산을 추정하는 지표로 사용하는 것이 타당한지 써주세요!",
+    "text": "결과를 살펴보고, 왜 n-1로 나눈 것을 분산을 추정하는 지표로 사용하는 것이 타당한지 써주세요!\nn-1로 나눈 모분산의 그래프(파란선)이 모평균에 더 가깝기 때문에 n-1로 나눈 것을 분산으로 추정하는 지표로 사용하는 것이 타당하다."
+  },
+  {
+    "objectID": "posts/hw4/index.html",
+    "href": "posts/hw4/index.html",
+    "title": "LS 빅데이터 스쿨 homework4",
+    "section": "",
+    "text": "import numpy as np\nfrom scipy.stats import norm\nimport matplotlib.pyplot as plt\n\nnp.random.seed(20240729)\nx_values = np.linspace(-16, 24, 10000)\nx = norm.rvs(loc=3, scale=7, size=20)\n\nk_2 = np.var(x, ddof=0) # n으로 나눈 값\ns_2 = np.var(x, ddof=1) # n-1로 나눈 값\n\npdf_values1 = norm.pdf(x_values, loc=3, scale=np.sqrt(k_2))\npdf_values2 = norm.pdf(x_values, loc=3, scale=np.sqrt(s_2))\nplt.plot(x_values, pdf_values1, color=\"black\", linewidth=2) #n\nplt.plot(x_values, pdf_values2, color=\"blue\", linewidth=2) #n-1\nplt.show()\nplt.clf()\n\n\n\n\n\n\n\n\n&lt;Figure size 672x480 with 0 Axes&gt;\n\n\n\n\n\n\nimport numpy as np\nfrom scipy.stats import norm\nimport matplotlib.pyplot as plt\n\nnp.random.seed(20240729)\nx_values = np.linspace(-16, 24, 10000)\nx = norm.rvs(loc=3, scale=7, size=20)\n\nk_2 = np.var(x, ddof=0) # n으로 나눈 값\ns_2 = np.var(x, ddof=1) # n-1로 나눈 값\nx_mean = x.mean()\n\npdf_values1 = norm.pdf(x_values, loc=3, scale=np.sqrt(k_2))\npdf_values2 = norm.pdf(x_values, loc=3, scale=np.sqrt(s_2))\nplt.plot(x_values, pdf_values1, color=\"black\", linewidth=2) #n\nplt.plot(x_values, pdf_values2, color=\"blue\", linewidth=2) #n-1\nplt.axvline(x_mean, color='green', linestyle=\"--\", linewidth=1, label='Mean')\nplt.show()\nplt.clf()\n\n\n\n\n\n\n\n\n&lt;Figure size 672x480 with 0 Axes&gt;\n\n\n\n\n\nn-1로 나눈 모분산의 그래프(파란선)이 모평균에 더 가깝기 때문에 n-1로 나눈 것을 분산으로 추정하는 지표로 사용하는 것이 타당하다."
+  },
+  {
+    "objectID": "posts/hw4/index.html#q1.-n-1로-나눈-것을-s_2-n으로-나눈-것을-k_2로-정의하고-s_2의-분포와-k_2의-분포를-그려주세요-10000개-사용",
+    "href": "posts/hw4/index.html#q1.-n-1로-나눈-것을-s_2-n으로-나눈-것을-k_2로-정의하고-s_2의-분포와-k_2의-분포를-그려주세요-10000개-사용",
+    "title": "LS 빅데이터 스쿨 homework4",
+    "section": "Q1. n-1로 나눈 것을 s_2, n으로 나눈 것을 k_2로 정의하고, s_2의 분포와 k_2의 분포를 그려주세요! (10000개 사용)",
+    "text": "Q1. n-1로 나눈 것을 s_2, n으로 나눈 것을 k_2로 정의하고, s_2의 분포와 k_2의 분포를 그려주세요! (10000개 사용)\n\nimport numpy as np\nfrom scipy.stats import norm\nimport matplotlib.pyplot as plt\n\nnp.random.seed(20240729)\nx_values = np.linspace(-16, 24, 10000)\nx = norm.rvs(loc=3, scale=7, size=20)\n\nk_2 = np.var(x, ddof=0) # n으로 나눈 값\nk_2\n\nnp.float64(21.53268317636923)\n\n\n\nimport numpy as np\nfrom scipy.stats import norm\nimport matplotlib.pyplot as plt\n\nnp.random.seed(20240729)\nx_values = np.linspace(-16, 24, 10000)\nx = norm.rvs(loc=3, scale=7, size=20)\n\ns_2 = np.var(x, ddof=1) # n-1로 나눈 값\ns_2\n\nnp.float64(22.66598229091498)\n\n\n\nimport numpy as np\nfrom scipy.stats import norm\nimport matplotlib.pyplot as plt\n\nnp.random.seed(20240729)\nx_values = np.linspace(-16, 24, 10000)\nx = norm.rvs(loc=3, scale=7, size=20)\n\nk_2 = np.var(x, ddof=0) # n으로 나눈 값\ns_2 = np.var(x, ddof=1) # n-1로 나눈 값\n\npdf_values1 = norm.pdf(x_values, loc=3, scale=np.sqrt(k_2))\npdf_values2 = norm.pdf(x_values, loc=3, scale=np.sqrt(s_2))\nplt.plot(x_values, pdf_values1, color=\"black\", linewidth=2) #n\nplt.plot(x_values, pdf_values2, color=\"blue\", linewidth=2) #n-1\nplt.show()\nplt.clf()\n\n\n\n\n\n\n\n\n&lt;Figure size 672x480 with 0 Axes&gt;"
+  },
+  {
+    "objectID": "posts/hw4/index.html#q3.-결과를-살펴보고-왜-n-1로-나눈-것을-분산을-추정하는-지표로-사용하는-것이-타당한지-써주세요",
+    "href": "posts/hw4/index.html#q3.-결과를-살펴보고-왜-n-1로-나눈-것을-분산을-추정하는-지표로-사용하는-것이-타당한지-써주세요",
+    "title": "LS 빅데이터 스쿨 homework4",
+    "section": "Q3. 결과를 살펴보고, 왜 n-1로 나눈 것을 분산을 추정하는 지표로 사용하는 것이 타당한지 써주세요!",
+    "text": "Q3. 결과를 살펴보고, 왜 n-1로 나눈 것을 분산을 추정하는 지표로 사용하는 것이 타당한지 써주세요!\nn-1로 나눈 모분산의 그래프(파란선)이 모평균에 더 가깝기 때문에 n-1로 나눈 것을 분산으로 추정하는 지표로 사용하는 것이 타당하다."
   }
 ]
