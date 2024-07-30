@@ -1,0 +1,75 @@
+---
+title: "LS 빅데이터 스쿨 homework5"
+jupyter: python3
+date: "2024-07-30"
+author: "youna"
+categories: [bigdata] 
+---
+
+## 그래프에서 각 성별 95% 신뢰구간 계산후 그리기(위아래 검정색 막대기)
+```{python}
+import pandas as pd
+import numpy as np
+
+# 데이터 불러오기
+raw_welfare = pd.read_spss("C:/Users/USER/Documents/LS빅데이터스쿨/LsBigdata-project1/data/koweps/Koweps_hpwc14_2019_beta2.sav")
+
+# 복사본 만들기
+welfare = raw_welfare.copy()
+
+# 변수명 바꾸기
+welfare= welfare.rename(
+    columns = {
+        "h14_g3" : "sex",
+        "h14_g4" : "birth",
+        "h14_g10" : "marrige_type",
+        "h14_g11" : "religion",
+        "p1402_8aq1" : "income",
+        "h14_eco9" : "code_job",
+        "h14_reg7" : "code_region"
+    }
+)
+
+welfare = welfare[["sex","birth", "marrige_type", "religion","income","code_job","code_region"]]
+
+welfare["sex"] = np.where(welfare["sex"] == 1.0, "male", "female")
+
+welfare
+```
+
+
+```{python}
+import pandas as pd
+import numpy as np
+import seaborn as sns
+import matplotlib.pyplot as plt
+
+sex_income = welfare.dropna(subset="income")\
+        .groupby("sex", as_index = False)\
+        .agg(mean_income = ("income","mean"),
+             std_income = ("income","std"),
+             count = ("sex","count"))
+sex_income
+
+
+# 각 성별의 95% 신뢰구간 계산
+sex_income['ci_upper'] = sex_income['mean_income'] + 1.96 * sex_income['std_income'] / np.sqrt(sex_income['count'])
+sex_income['ci_lower'] = sex_income['mean_income'] - 1.96 * sex_income['std_income'] / np.sqrt(sex_income['count'])
+
+# 막대 그래프 그리기
+sns.barplot(data=sex_income, x='sex', y='mean_income', hue="sex",errorbar=None)
+
+# 신뢰구간을 나타내는 에러바 추가
+plt.errorbar(
+    x=sex_income['sex'],  # x축 위치
+    y=sex_income['mean_income'],  # y축 평균 소득
+    yerr=[sex_income['mean_income'] - sex_income['ci_lower'], sex_income['ci_upper'] - sex_income['mean_income']],  # 신뢰구간 범위
+    fmt='none',  # 데이터 포인트는 표시하지 않음
+    capsize=5,  # 에러바 끝에 캡의 크기
+    color='black'  # 에러바 색상
+)
+plt.show()
+plt.clf()
+
+```
+
