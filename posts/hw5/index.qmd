@@ -10,6 +10,7 @@ categories: [bigdata]
 ```{python}
 import pandas as pd
 import numpy as np
+import pyreadstat
 
 # 데이터 불러오기
 raw_welfare = pd.read_spss("C:/Users/USER/Documents/LS빅데이터스쿨/LsBigdata-project1/data/koweps/Koweps_hpwc14_2019_beta2.sav")
@@ -63,9 +64,10 @@ sns.barplot(data=sex_income, x='sex', y='mean_income', hue="sex",errorbar=None)
 plt.errorbar(
     x=sex_income['sex'],  # x축 위치
     y=sex_income['mean_income'],  # y축 평균 소득
-    yerr=[sex_income['mean_income'] - sex_income['ci_lower'], sex_income['ci_upper'] - sex_income['mean_income']],  # 신뢰구간 범위
+    yerr=[sex_income['mean_income'] - sex_income['ci_lower'],    
+    sex_income['ci_upper'] - sex_income['mean_income']],  # 신뢰구간 범위
     fmt='none',  # 데이터 포인트는 표시하지 않음
-    capsize=5,  # 에러바 끝에 캡의 크기
+    capsize=20,  # 에러바 끝에 캡의 크기
     color='black'  # 에러바 색상
 )
 plt.show()
