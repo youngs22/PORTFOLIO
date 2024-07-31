@@ -9,5 +9,14 @@
       "/posts/hw2/index.html",
       "/posts/hw1/index.html"
     ]
+  },
+  {
+    "listing": "/project.html",
+    "items": [
+      "/pjts/project1-1/index.html",
+      "/pjts/project1-2/index.html",
+      "/pjts/project1-3/index.html",
+      "/pjts/project1-4/index.html"
+    ]
   }
 ]

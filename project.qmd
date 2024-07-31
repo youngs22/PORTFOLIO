@@ -1,0 +1,8 @@
+---
+title: "Project"
+listing:
+  contents: pjts
+  sort: "date desc"
+  type: default
+  categories: true
+---
