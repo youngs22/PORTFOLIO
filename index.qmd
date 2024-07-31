@@ -5,15 +5,13 @@ toc: false
 about:
     id: hero-heading
     template: jolla
-    image: logo.jfif
+    image: tree.jpg
     links:
-     - icon: twitter
-       text: twitter
-       href: https://twitter.com
      - icon: github
        text: Github
-       href: https://github.com
+       href: https://github.com/youngs22/PORTFOLIO
 ---
 ---
 
-"안녕하세요,  유나의 [포트폴리오 홈페이지](https://youngs22.github.io/PORTFOLIO/)에 오신 것을 환영합니다."
+안녕하세요,  유나의 [포트폴리오 홈페이지](https://youngs22.github.io/PORTFOLIO/)에 오신 것을 환영합니다. <br>
+빅데이터 프로젝트 관련 게시글을 작성하고 있습니다.
