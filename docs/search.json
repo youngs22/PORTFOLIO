@@ -60,7 +60,7 @@
     "href": "blog.html",
     "title": "Blog",
     "section": "",
-    "text": "LS 빅데이터 스쿨 homework5\n\n\n\n\n\n\nbigdata\n\n\n\n\n\n\n\n\n\nJul 30, 2024\n\n\nyouna\n\n\n\n\n\n\n\n\n\n\n\n\nLS 빅데이터 스쿨 homework4\n\n\n\n\n\n\nbigdata\n\n\n\n\n\n\n\n\n\nJul 29, 2024\n\n\nyouna\n\n\n\n\n\n\n\n\n\n\n\n\nLS 빅데이터 스쿨 homework3\n\n\n\n\n\n\nbigdata\n\n\n\n\n\n\n\n\n\nJul 25, 2024\n\n\nyouna\n\n\n\n\n\n\n\n\n\n\n\n\nLS 빅데이터 스쿨 homework_etc\n\n\n\n\n\n\nbigdata\n\n\n\n\n\n\n\n\n\nJul 22, 2024\n\n\nyouna\n\n\n\n\n\n\n\n\n\n\n\n\nLS 빅데이터 스쿨 homework2\n\n\n\n\n\n\nbigdata\n\n\n\n\n\n\n\n\n\nJul 16, 2024\n\n\nyouna\n\n\n\n\n\n\n\n\n\n\n\n\nLS 빅데이터 스쿨 homework1\n\n\n\n\n\n\nbigdata\n\n\n\n\n\n\n\n\n\nJul 15, 2024\n\n\nyouna\n\n\n\n\n\n\nNo matching items"
+    "text": "LS 빅데이터 스쿨 homework6\n\n\n\n\n\n\nbigdata\n\n\n\n\n\n\n\n\n\nAug 5, 2024\n\n\nyouna\n\n\n\n\n\n\n\n\n\n\n\n\nLS 빅데이터 스쿨 homework5\n\n\n\n\n\n\nbigdata\n\n\n\n\n\n\n\n\n\nJul 30, 2024\n\n\nyouna\n\n\n\n\n\n\n\n\n\n\n\n\nLS 빅데이터 스쿨 homework4\n\n\n\n\n\n\nbigdata\n\n\n\n\n\n\n\n\n\nJul 29, 2024\n\n\nyouna\n\n\n\n\n\n\n\n\n\n\n\n\nLS 빅데이터 스쿨 homework3\n\n\n\n\n\n\nbigdata\n\n\n\n\n\n\n\n\n\nJul 25, 2024\n\n\nyouna\n\n\n\n\n\n\n\n\n\n\n\n\nLS 빅데이터 스쿨 homework_etc\n\n\n\n\n\n\nbigdata\n\n\n\n\n\n\n\n\n\nJul 22, 2024\n\n\nyouna\n\n\n\n\n\n\n\n\n\n\n\n\nLS 빅데이터 스쿨 homework2\n\n\n\n\n\n\nbigdata\n\n\n\n\n\n\n\n\n\nJul 16, 2024\n\n\nyouna\n\n\n\n\n\n\n\n\n\n\n\n\nLS 빅데이터 스쿨 homework1\n\n\n\n\n\n\nbigdata\n\n\n\n\n\n\n\n\n\nJul 15, 2024\n\n\nyouna\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "posts/hw1/index.html",
@@ -495,5 +495,47 @@
     "title": "Project1-3. 국내 여행 횟수",
     "section": "데이터 시각화",
     "text": "데이터 시각화\n\n# 라이브러리 호출\nimport pandas as pd\nimport numpy as np\nimport matplotlib.pyplot as plt\n\n\n# 전처리 된 데이터 불러오기\np_num_trip = pd.read_excel('C:/Users/USER/Documents/LS빅데이터스쿨/PORTFOLIO/pre_data/p_num_trip.xlsx')\n\n\n# 분석을 용이하게 하기 위해 query()를 사용하여 각 년도별 행을 추출하여 DataFrame생성\ny2018 = p_num_trip.query('year == 2018')\ny2019 = p_num_trip.query('year == 2019')\ny2020 = p_num_trip.query('year == 2020')\ny2021 = p_num_trip.query('year == 2021')\ny2022 = p_num_trip.query('year == 2022')\n\n# 그래프에 한글 출력 가능하게 하기 위해 rcParams(runtimeconfiguration) 딕셔너리 설정\nplt.rcParams['font.family'] ='Malgun Gothic'\n\n\n1. 2018년도 ~ 2022년도 5년간 연령별 여행 횟수 트랜드 구하기\n\n# 그래프의 x축과 y축의 데이터 값 만들기\n# for x in range 구문을 이용하여 다음과 같은 반복문을 실행, 년간 연령대 별 여행 횟수의 합을 구하는 것을 2018년부터 2022년까지 반복한다.\nteens_total = [x['teens'].sum() for x in [y2018, y2019, y2020, y2021, y2022]]\nyoung_adults_total = [x['young_adults'].sum() for x in [y2018, y2019, y2020, y2021, y2022]]\nmiddle_adults_total = [x['middle_adults'].sum() for x in [y2018, y2019, y2020, y2021, y2022]]\nseniors_adults_total = [x['seniors'].sum() for x in [y2018, y2019, y2020, y2021, y2022]]\nyears = [2018,2019,2020,2021,2022]\n\n# title(), ylabel(), xlabel()을 사용하여 그래프의 제목과 x, y축 레이블 설정\nplt.title(\"2018년 ~ 2022년 연령대 별 여행 횟수\")\nplt.ylabel(\"단위 : 천회\")\nplt.xlabel(\"단위 : 년\")\n\n# 그래프 그리기\n# x_range : year의 길이 만큼 x축의 범위를 설정\n# x_range + c : 그래프가 그려지는 위치값을 조절\n# width : 그래프의 너비 설정\n# label : 범례 표시\n# color : 그래프의 색상 표시\nx_range = np.arange(len(years))\nplt.bar(x_range+0.0, teens_total, width=0.2, label='청소년(15~19세)', color = 'lawngreen')\nplt.bar(x_range+0.2, young_adults_total, width=0.2, label='청년(2~30대)', color = 'blue')\nplt.bar(x_range+0.4, middle_adults_total, width=0.2, label='중년(4~50대)', color = 'red')\nplt.bar(x_range+0.6, seniors_adults_total, width=0.2, label='노년(6~70대 이상)', color = 'gray')\n\n# x축 눈금 설정\n# x_ticks()을 사용하여 x_range(0~0.6)의 중간(0.3)으로 눈금의 위치를 옮기고, 각 해당 위치에 해당하는 레이블을 years로 지정하여 년도가 함께 표시되도록 지정\nplt.xticks(x_range+0.3, years)\n\n# legend()를 사용하여 범례 추가\nplt.legend()\n\n# 그래프 보여주기\nplt.show()\nplt.clf()\n\n\n\n\n\n\n\n\n&lt;Figure size 672x480 with 0 Axes&gt;\n\n\n\n\n2. 2018년도 ~ 2022년도 5년간 가구원 수 별 여행 횟수 트랜드 구하기\n\n# 그래프의 x축과 y축의 데이터 값 만들기\n# for x in range 구문을 이용하여 다음과 같은 반복문을 실행, 년간 가구원 수 별 여행 횟수의 합을 구하는 것을 2018년부터 2022년까지 반복한다.\nper1_total = [x['per1'].sum() for x in [y2018, y2019, y2020, y2021, y2022]]\nper2_total = [x['per2'].sum() for x in [y2018, y2019, y2020, y2021, y2022]]\nper3_total = [x['per3+'].sum() for x in [y2018, y2019, y2020, y2021, y2022]]\nyears = [2018,2019,2020,2021,2022]\n\n# title(), ylabel(), xlabel()을 사용하여 그래프의 제목과 x, y축 레이블 설정\nplt.title(\"2018년 ~ 2022년 가구원 수 별 여행 횟수\")\nplt.ylabel(\"단위 : 천회\")\nplt.xlabel(\"단위 : 년\")\n\n# 그래프 그리기\n# x_range : year의 길이 만큼 x축의 범위를 설정\n# x_range + c : 그래프가 그려지는 위치값을 조절\n# width : 그래프의 너비 설정\n# label : 범례 표시\n# color : 그래프의 색상 표시\nx_range = np.arange(len(years))\nplt.bar(x_range+0.0, per1_total, width=0.2, label='1인 가구', color = 'slateblue')\nplt.bar(x_range+0.2, per2_total, width=0.2, label='2인 가구', color = 'coral')\nplt.bar(x_range+0.4, per3_total, width=0.2, label='3인 이상 가구', color = 'teal')\n\n# x축 눈금 설정\n# x_ticks()을 사용하여 x_range(0~0.4)의 중간(0.2)으로 눈금의 위치를 옮기고, 각 해당 위치에 해당하는 레이블을 years로 지정하여 년도가 함께 표시되도록 지정\nplt.xticks(x_range+0.2, years) \n\n# 범례추가\nplt.legend()\n\n# 그래프 보여주기\nplt.show()\nplt.clf()\n\n\n\n\n\n\n\n\n&lt;Figure size 672x480 with 0 Axes&gt;"
+  },
+  {
+    "objectID": "posts/hw6/index.html",
+    "href": "posts/hw6/index.html",
+    "title": "LS 빅데이터 스쿨 homework6",
+    "section": "",
+    "text": "슬통 자동자는 매해 출시되는 신형 자동차의 에너지 소비효율 등급을 1등급으로 유지하고 있다. 22 년 개발된 신형 모델이 한국 자동차 평가원에서 설정한 에너지 소비 효율등급 1등급을 받을 수 있을지 검정하려한다. 평가원에 따르면 1등급의 기준은 평균 복합 에너지 소비효율이 16.0 이상인 경우 부여 한다고 한다. 다음% 신형 자동차 15대의 복합 에너지소비효율 측정한 결과이다. 15.078, 15.752, 15.549, 15.56, 16.098, 13.277, 15.462, 16.116, 15.214, 16.93, 14.118, 14.927, 15.382, 16.709, 16.804 표본에 의하여 판단해볼때, 현대자동차의 신형 모델은 에너지 효율 1등급으로 판단할 수 있을지 판단해보시오. (유의수준 1%로 설정)\n\n\n귀무가설(H0) : 평균 복합 에너지 소비효율이 16.0이상일 것이다. H0 : mu &gt;= 16\n대립가설(H1) : 평균 복합 에너지 소비효율은 16.0미만일 것이다. H1 : mu &lt; 16\n\n\n\n\nimport numpy as np\n\nx=np.array([15.078, 15.752, 15.549, 15.56, 16.098, 13.277, 15.462, 16.116, 15.214, 16.93, 14.118, 14.927, 15.382, 16.709, 16.804])\nn=15\nx_bar = x.mean()\nx_std = np.std(x,ddof=1) # np.var(x,ddof=1)\nt= (x_bar-16)/(x_std/np.sqrt(n))\nprint(\"검정통계량: \",t)\n\n검정통계량:  -1.8500447456376756\n\n\n\n\n\n\nfrom scipy.stats import norm\npvalue=norm.cdf(-1.85, loc=0, scale=1)\nprint(\"유의확률(p-value): \",pvalue)\n\n유의확률(p-value):  0.03215677479561371\n\n\n\n\n\n\n#6 신뢰구간\nfrom scipy.stats import t\nupper = x_bar + t.ppf(0.95, df=n-1) * np.std(x,ddof=1) / np.sqrt(n)\nlower = x_bar - t.ppf(0.95, df=n-1) * np.std(x,ddof=1) / np.sqrt(n)\nprint(\"신뢰구간 상한값: \",upper)\nprint(\"신뢰구간 하한값: \",lower)\n\n신뢰구간 상한값:  15.977540294592114\n신뢰구간 하한값:  15.085926372074553\n\n\n\n\n\n유의확률(p-value)이 0.0322로, 유의수준 0.01보다 크므로 귀무가설 채택 -&gt; 평균 복합 에너지 소비효율이 16.0이상일 것이다."
+  },
+  {
+    "objectID": "posts/hw6/index.html#검정을-위한-가설을-명확하게-서술하시오.",
+    "href": "posts/hw6/index.html#검정을-위한-가설을-명확하게-서술하시오.",
+    "title": "LS 빅데이터 스쿨 homework6",
+    "section": "",
+    "text": "귀무가설(H0) : 평균 복합 에너지 소비효율이 16.0이상일 것이다. H0 : mu &gt;= 16\n대립가설(H1) : 평균 복합 에너지 소비효율은 16.0미만일 것이다. H1 : mu &lt; 16"
+  },
+  {
+    "objectID": "posts/hw6/index.html#검정통계량-계산하시오.",
+    "href": "posts/hw6/index.html#검정통계량-계산하시오.",
+    "title": "LS 빅데이터 스쿨 homework6",
+    "section": "",
+    "text": "import numpy as np\n\nx=np.array([15.078, 15.752, 15.549, 15.56, 16.098, 13.277, 15.462, 16.116, 15.214, 16.93, 14.118, 14.927, 15.382, 16.709, 16.804])\nn=15\nx_bar = x.mean()\nx_std = np.std(x,ddof=1) # np.var(x,ddof=1)\nt= (x_bar-16)/(x_std/np.sqrt(n))\nprint(\"검정통계량: \",t)\n\n검정통계량:  -1.8500447456376756"
+  },
+  {
+    "objectID": "posts/hw6/index.html#p-value을-구하세요.",
+    "href": "posts/hw6/index.html#p-value을-구하세요.",
+    "title": "LS 빅데이터 스쿨 homework6",
+    "section": "",
+    "text": "from scipy.stats import norm\npvalue=norm.cdf(-1.85, loc=0, scale=1)\nprint(\"유의확률(p-value): \",pvalue)\n\n유의확률(p-value):  0.03215677479561371"
+  },
+  {
+    "objectID": "posts/hw6/index.html#현대자동차의-신형-모델의-평균-복합-에너지-소비효율에-대하여-95-신뢰구간을-구해보세요.",
+    "href": "posts/hw6/index.html#현대자동차의-신형-모델의-평균-복합-에너지-소비효율에-대하여-95-신뢰구간을-구해보세요.",
+    "title": "LS 빅데이터 스쿨 homework6",
+    "section": "",
+    "text": "#6 신뢰구간\nfrom scipy.stats import t\nupper = x_bar + t.ppf(0.95, df=n-1) * np.std(x,ddof=1) / np.sqrt(n)\nlower = x_bar - t.ppf(0.95, df=n-1) * np.std(x,ddof=1) / np.sqrt(n)\nprint(\"신뢰구간 상한값: \",upper)\nprint(\"신뢰구간 하한값: \",lower)\n\n신뢰구간 상한값:  15.977540294592114\n신뢰구간 하한값:  15.085926372074553"
+  },
+  {
+    "objectID": "posts/hw6/index.html#결론",
+    "href": "posts/hw6/index.html#결론",
+    "title": "LS 빅데이터 스쿨 homework6",
+    "section": "",
+    "text": "유의확률(p-value)이 0.0322로, 유의수준 0.01보다 크므로 귀무가설 채택 -&gt; 평균 복합 에너지 소비효율이 16.0이상일 것이다."
   }
 ]
