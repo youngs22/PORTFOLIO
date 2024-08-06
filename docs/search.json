@@ -501,7 +501,7 @@
     "href": "posts/hw6/index.html",
     "title": "LS 빅데이터 스쿨 homework6",
     "section": "",
-    "text": "슬통 자동자는 매해 출시되는 신형 자동차의 에너지 소비효율 등급을 1등급으로 유지하고 있다. 22 년 개발된 신형 모델이 한국 자동차 평가원에서 설정한 에너지 소비 효율등급 1등급을 받을 수 있을지 검정하려한다. 평가원에 따르면 1등급의 기준은 평균 복합 에너지 소비효율이 16.0 이상인 경우 부여 한다고 한다. 다음% 신형 자동차 15대의 복합 에너지소비효율 측정한 결과이다. 15.078, 15.752, 15.549, 15.56, 16.098, 13.277, 15.462, 16.116, 15.214, 16.93, 14.118, 14.927, 15.382, 16.709, 16.804 표본에 의하여 판단해볼때, 현대자동차의 신형 모델은 에너지 효율 1등급으로 판단할 수 있을지 판단해보시오. (유의수준 1%로 설정)\n\n\n귀무가설(H0) : 평균 복합 에너지 소비효율이 16.0이상일 것이다. H0 : mu &gt;= 16\n대립가설(H1) : 평균 복합 에너지 소비효율은 16.0미만일 것이다. H1 : mu &lt; 16\n\n\n\n\nimport numpy as np\n\nx=np.array([15.078, 15.752, 15.549, 15.56, 16.098, 13.277, 15.462, 16.116, 15.214, 16.93, 14.118, 14.927, 15.382, 16.709, 16.804])\nn=15\nx_bar = x.mean()\nx_std = np.std(x,ddof=1) # np.var(x,ddof=1)\nt= (x_bar-16)/(x_std/np.sqrt(n))\nprint(\"검정통계량: \",t)\n\n검정통계량:  -1.8500447456376756\n\n\n\n\n\n\nfrom scipy.stats import norm\npvalue=norm.cdf(-1.85, loc=0, scale=1)\nprint(\"유의확률(p-value): \",pvalue)\n\n유의확률(p-value):  0.03215677479561371\n\n\n\n\n\n\n#6 신뢰구간\nfrom scipy.stats import t\nupper = x_bar + t.ppf(0.95, df=n-1) * np.std(x,ddof=1) / np.sqrt(n)\nlower = x_bar - t.ppf(0.95, df=n-1) * np.std(x,ddof=1) / np.sqrt(n)\nprint(\"신뢰구간 상한값: \",upper)\nprint(\"신뢰구간 하한값: \",lower)\n\n신뢰구간 상한값:  15.977540294592114\n신뢰구간 하한값:  15.085926372074553\n\n\n\n\n\n유의확률(p-value)이 0.0322로, 유의수준 0.01보다 크므로 귀무가설 채택 -&gt; 평균 복합 에너지 소비효율이 16.0이상일 것이다."
+    "text": "슬통 자동자는 매해 출시되는 신형 자동차의 에너지 소비효율 등급을 1등급으로 유지하고 있다. 22 년 개발된 신형 모델이 한국 자동차 평가원에서 설정한 에너지 소비 효율등급 1등급을 받을 수 있을지 검정하려한다. 평가원에 따르면 1등급의 기준은 평균 복합 에너지 소비효율이 16.0 이상인 경우 부여 한다고 한다. 다음% 신형 자동차 15대의 복합 에너지소비효율 측정한 결과이다. 15.078, 15.752, 15.549, 15.56, 16.098, 13.277, 15.462, 16.116, 15.214, 16.93, 14.118, 14.927, 15.382, 16.709, 16.804 표본에 의하여 판단해볼때, 현대자동차의 신형 모델은 에너지 효율 1등급으로 판단할 수 있을지 판단해보시오. (유의수준 1%로 설정)\n\n\n귀무가설(H0) : 평균 복합 에너지 소비효율이 16.0이상일 것이다. H0 : mu &gt;= 16\n대립가설(H1) : 평균 복합 에너지 소비효율은 16.0미만일 것이다. H1 : mu &lt; 16\n\n\n\n\nimport numpy as np\n\nx=np.array([15.078, 15.752, 15.549, 15.56, 16.098, 13.277, 15.462, 16.116, 15.214, 16.93, 14.118, 14.927, 15.382, 16.709, 16.804])\nn=15\nx_bar = x.mean()\nx_std = np.std(x,ddof=1) # np.var(x,ddof=1)\nt= (x_bar-16)/(x_std/np.sqrt(n))\nprint(\"검정통계량: \",t)\n\n검정통계량:  -1.8500447456376756\n\n\n\n\n\n\nfrom scipy.stats import norm\npvalue=norm.cdf(t, loc=0, scale=1)\nprint(\"유의확률(p-value): \",pvalue)\n\n유의확률(p-value):  0.03215355034031973\n\n\n\n\n\n\n#6 신뢰구간\nfrom scipy.stats import t\nupper = x_bar + t.ppf(0.95, df=n-1) * np.std(x,ddof=1) / np.sqrt(n)\nlower = x_bar - t.ppf(0.95, df=n-1) * np.std(x,ddof=1) / np.sqrt(n)\nprint(\"신뢰구간 상한값: \",upper)\nprint(\"신뢰구간 하한값: \",lower)\n\n신뢰구간 상한값:  15.977540294592114\n신뢰구간 하한값:  15.085926372074553\n\n\n\n\n\n유의확률(p-value)이 0.0322로, 유의수준 0.01보다 크므로 귀무가설 채택 -&gt; 평균 복합 에너지 소비효율이 16.0이상일 것이다. -&gt; 현대자동차의 신형 모델은 에너지 효율 1등급으로 판단할 수 있다."
   },
   {
     "objectID": "posts/hw6/index.html#검정을-위한-가설을-명확하게-서술하시오.",
@@ -522,7 +522,7 @@
     "href": "posts/hw6/index.html#p-value을-구하세요.",
     "title": "LS 빅데이터 스쿨 homework6",
     "section": "",
-    "text": "from scipy.stats import norm\npvalue=norm.cdf(-1.85, loc=0, scale=1)\nprint(\"유의확률(p-value): \",pvalue)\n\n유의확률(p-value):  0.03215677479561371"
+    "text": "from scipy.stats import norm\npvalue=norm.cdf(t, loc=0, scale=1)\nprint(\"유의확률(p-value): \",pvalue)\n\n유의확률(p-value):  0.03215355034031973"
   },
   {
     "objectID": "posts/hw6/index.html#현대자동차의-신형-모델의-평균-복합-에너지-소비효율에-대하여-95-신뢰구간을-구해보세요.",
@@ -536,6 +536,6 @@
     "href": "posts/hw6/index.html#결론",
     "title": "LS 빅데이터 스쿨 homework6",
     "section": "",
-    "text": "유의확률(p-value)이 0.0322로, 유의수준 0.01보다 크므로 귀무가설 채택 -&gt; 평균 복합 에너지 소비효율이 16.0이상일 것이다."
+    "text": "유의확률(p-value)이 0.0322로, 유의수준 0.01보다 크므로 귀무가설 채택 -&gt; 평균 복합 에너지 소비효율이 16.0이상일 것이다. -&gt; 현대자동차의 신형 모델은 에너지 효율 1등급으로 판단할 수 있다."
   }
 ]

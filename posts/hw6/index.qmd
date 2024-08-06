@@ -35,7 +35,7 @@ print("검정통계량: ",t)
 ## 4. p-value을 구하세요.
 ```{python}
 from scipy.stats import norm
-pvalue=norm.cdf(-1.85, loc=0, scale=1)
+pvalue=norm.cdf(t, loc=0, scale=1)
 print("유의확률(p-value): ",pvalue)
 ```
 
