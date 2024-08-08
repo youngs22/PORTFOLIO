@@ -4,6 +4,7 @@ jupyter: python3
 date: "2024-08-05"
 author: "youna"
 categories: [bigdata] 
+image: "linear.png"
 ---
 # 신형 자동차의 에너지 소비효율 등급
 

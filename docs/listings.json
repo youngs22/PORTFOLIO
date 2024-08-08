@@ -2,6 +2,7 @@
   {
     "listing": "/blog.html",
     "items": [
+      "/posts/index.html",
       "/posts/hw6/index.html",
       "/posts/hw5/index.html",
       "/posts/hw4/index.html",
@@ -18,6 +19,18 @@
       "/pjts/project1-2/index.html",
       "/pjts/project1-3/index.html",
       "/pjts/project1-4/index.html"
+    ]
+  },
+  {
+    "listing": "/posts/index.html",
+    "items": [
+      "/posts/hw6/index.html",
+      "/posts/hw5/index.html",
+      "/posts/hw4/index.html",
+      "/posts/hw3/index.html",
+      "/posts/etc/index.html",
+      "/posts/hw2/index.html",
+      "/posts/hw1/index.html"
     ]
   }
 ]
