@@ -2,11 +2,10 @@
 title: "Blog"
 listing:
   contents: posts
-    - "**/*/**.qmd"
-    - "**/*/**.ipynb"
+     # - "**/*/**.qmd"
+     # - "**/*/**.ipynb"
   type: grid
   fields: [image, date, title, subtitle]
   sort: "date desc"
   categories: true
-
 ---
