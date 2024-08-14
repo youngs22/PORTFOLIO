@@ -16,7 +16,7 @@ website:
 
 format:
   html:
-    theme: Minty
+    theme: Sandstone
     toc: true
 
 
