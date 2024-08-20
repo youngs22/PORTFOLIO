@@ -4,6 +4,7 @@ jupyter: python3
 date: "2024-07-16"
 author: "youna"
 categories: [bigdata]
+image: "car.png"
 ---
 
 ## 144 page
