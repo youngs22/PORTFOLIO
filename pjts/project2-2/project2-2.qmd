@@ -1,5 +1,5 @@
 --- 
-title: "Ames"
+title: "Project2-2. Ames"
 date: "2024-08-20"
 format: 
   dashboard:

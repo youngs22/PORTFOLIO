@@ -1,5 +1,5 @@
 ---
-title: "Project2 AMES의 교육 관련"
+title: "Project2. AMES의 교육 관련"
 jupyter: python3
 date: "2024-08-14"
 author: "youna"

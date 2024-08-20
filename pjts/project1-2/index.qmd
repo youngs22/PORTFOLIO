@@ -1,6 +1,9 @@
 ---
 title: "Project1-2. 지역별 관광지 검색 순위"
 jupyter: python3
+format: 
+  html:
+    scrolling: true
 categories: [project1] 
 ---
 
