@@ -1,6 +1,7 @@
 ---
 title: "Project1-4.여행을 선택하는 이유"
 jupyter: python3
+categories: [project1] 
 ---
 
 ## 데이터 전처리

@@ -1,6 +1,7 @@
 ---
 title: "Project1-2. 지역별 관광지 검색 순위"
 jupyter: python3
+categories: [project1] 
 ---
 
 ## 데이터 전처리

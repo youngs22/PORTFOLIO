@@ -172,7 +172,7 @@ window.Quarto = {
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
         
-    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(5)</span></div></div></div>
+    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(6)</span></div><div class="category" data-category="project1">project1 <span class="quarto-category-count">(4)</span></div><div class="category" data-category="project2">project2 <span class="quarto-category-count">(2)</span></div></div></div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
@@ -201,10 +201,10 @@ window.Quarto = {
 
 <div class="quarto-listing quarto-listing-container-default" id="listing-listing">
 <div class="list quarto-listing-default">
-<div class="quarto-post image-right" data-index="0" data-listing-file-modified-sort="1722386550543" data-listing-reading-time-sort="4" data-listing-word-count-sort="758">
+<div class="quarto-post image-right" data-index="0" data-categories="project1" data-listing-file-modified-sort="1724131418507" data-listing-reading-time-sort="4" data-listing-word-count-sort="758">
 <div class="thumbnail">
 <p><a href="./pjts/project1-1/index.html" class="no-external"></a></p><a href="./pjts/project1-1/index.html" class="no-external">
-<p class="card-img-top"><img src="pjts\project1-1\index_files\figure-html\cell-9-output-2.png"  class="thumbnail-image card-img"/></p>
+<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
 </a><p><a href="./pjts/project1-1/index.html" class="no-external"></a></p>
 </div>
 <div class="body">
@@ -214,8 +214,13 @@ window.Quarto = {
 <div class="listing-subtitle">
 <a href="./pjts/project1-1/index.html" class="no-external"></a>
 </div>
+<div class="listing-categories">
+<div class="listing-category" onclick="window.quartoListingCategory('project1'); return false;">
+project1
+</div>
+</div>
 <div class="listing-description">
-<a href="./pjts/project1-1/index.html" class="no-external">5 rows × 21 columns</a>
+<a href="./pjts/project1-1/index.html" class="no-external"></a>
 </div>
 </div>
 <div class="metadata">
@@ -223,10 +228,10 @@ window.Quarto = {
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="1" data-listing-file-modified-sort="1722386550565" data-listing-reading-time-sort="3" data-listing-word-count-sort="440">
+<div class="quarto-post image-right" data-index="1" data-categories="project1" data-listing-file-modified-sort="1724131418507" data-listing-reading-time-sort="3" data-listing-word-count-sort="440">
 <div class="thumbnail">
 <p><a href="./pjts/project1-2/index.html" class="no-external"></a></p><a href="./pjts/project1-2/index.html" class="no-external">
-<p class="card-img-top"><img src="pjts\project1-2\index_files\figure-html\cell-10-output-1.png"  class="thumbnail-image card-img"/></p>
+<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
 </a><p><a href="./pjts/project1-2/index.html" class="no-external"></a></p>
 </div>
 <div class="body">
@@ -236,17 +241,13 @@ window.Quarto = {
 <div class="listing-subtitle">
 <a href="./pjts/project1-2/index.html" class="no-external"></a>
 </div>
+<div class="listing-categories">
+<div class="listing-category" onclick="window.quartoListingCategory('project1'); return false;">
+project1
+</div>
+</div>
 <div class="listing-description">
-<a href="./pjts/project1-2/index.html" class="no-external">
-
-<section id="데이터-불러오기" class="level3">
-
-<div id="a2014fa7" class="cell" data-execution_count="1">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><span class="im">import</span> numpy <span class="im">as</span> np</span>
-<span id="cb1-2"><span class="im">import</span> pandas <span class="im">as</span> pd</span>
-<span id="cb1-3"></span>
-<span id="cb1-4">tour_2018 <span class="op">=</span> pd.read_csv(<span class="st">'C:/Users/USER/Documents/LS빅데이터스쿨/PORTFOLIO/data/ranking_2018.csv'</span>, encoding<span class="op">=</span><span class="st">'cp949'</span>)</span>
-<span id="cb1-5">tour_2019 <span class="op">=</span> pd.read…<span class="st"></span><span class="op"></span><span class="st"></span></span><span id="cb1-6"><span class="op"></span><span class="st"></span><span class="op"></span><span class="st"></span></span><span id="cb1-7"><span class="op"></span><span class="st"></span><span class="op"></span><span class="st"></span></span><span id="cb1-8"><span class="op"></span><span class="st"></span><span class="op"></span><span class="st"></span></span></code></pre></div></div></section><section id="열-이름-변경" class="level3"><div id="b1c1ac8c" class="cell" data-execution_count="2"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><span class="op"></span><span class="st"></span><span class="st"></span><span class="st"></span><span class="st"></span><span class="st"></span><span class="st"></span><span class="st"></span><span class="st"></span></span><span id="cb2-2"><span class="st"></span><span class="st"></span><span class="st"></span><span class="st"></span><span class="st"></span><span class="st"></span><span class="st"></span><span class="st"></span></span><span id="cb2-3"></span><span id="cb2-4"><span class="op"></span><span class="op"></span><span class="va"></span></span><span id="cb2-5"><span class="op"></span><span class="op"></span><span class="va"></span></span><span id="cb2-6"><span class="op"></span><span class="op"></span><span class="va"></span></span><span id="cb2-7"><span class="op"></span><span class="op"></span><span class="va"></span></span><span id="cb2-8"><span class="op"></span><span class="op"></span><span class="va"></span></span></code></pre></div></div></section><section id="cate_remove-목록-정의" class="level3"><div id="4dfe71dc" class="cell" data-execution_count="3"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><span class="op"></span><span class="st"></span><span class="st"></span><span class="st"></span><span class="st"></span><span class="st"></span><span class="st"></span></span><span id="cb3-2"></span><span id="cb3-3"><span class="co"></span></span><span id="cb3-4"><span class="op"></span><span class="op"></span><span class="st"></span></span><span id="cb3-5"><span class="op"></span><span class="op"></span><span class="st"></span></span><span id="cb3-6"><span class="op"></span><span class="op"></span><span class="st"></span></span><span id="cb3-7"><span class="op"></span><span class="op"></span><span class="st"></span></span><span id="cb3-8"><span class="op"></span><span class="op"></span><span class="st"></span></span></code></pre></div></div></section><section id="각-데이터프레임에-연도-열-추가" class="level3"><div id="ae4535a7" class="cell" data-execution_count="4"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><span class="st"></span><span class="op"></span><span class="dv"></span></span><span id="cb4-2"><span class="st"></span><span class="op"></span><span class="dv"></span></span><span id="cb4-3"><span class="st"></span><span class="op"></span><span class="dv"></span></span><span id="cb4-4"><span class="st"></span><span class="op"></span><span class="dv"></span></span><span id="cb4-5"><span class="st"></span><span class="op"></span><span class="dv"></span></span></code></pre></div></div></section><section id="데이터-결합" class="level3"><div id="5226b1ed" class="cell" data-execution_count="5"><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><span class="op"></span></span><span id="cb5-2"><span class="op"></span><span class="op"></span><span class="va"></span></span><span id="cb5-3"></span><span id="cb5-4"><span class="co"></span></span><span id="cb5-5"><span class="op"></span><span class="st"></span><span class="st"></span><span class="op"></span><span class="va"></span></span></code></pre></div></div></section><section id="combined_city-열-추가" class="level3"><div id="072e684f" class="cell" data-execution_count="6"><div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><span class="st"></span><span class="op"></span><span class="st"></span><span class="op"></span><span class="st"></span><span class="op"></span><span class="st"></span></span><span id="cb6-2"></span><span id="cb6-3"><span class="co"></span></span><span id="cb6-4"></span><span id="cb6-5"><span class="bu"></span></span><span id="cb6-6"><span class="bu"></span><span class="st"></span><span class="co"></span></span></code></pre></div><div class="cell-output cell-output-stdout"><pre><code></code></pre></div></div></section><section id="전처리한-데이터-파일-추출" class="level3"><div id="b4e55f56" class="cell" data-execution_count="7"><div class="sourceCode cell-code" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><span class="co"></span></span><span id="cb8-2"><span class="st"></span><span class="op"></span><span class="va"></span></span></code></pre></div></div><hr></section></a>
+<a href="./pjts/project1-2/index.html" class="no-external"></a>
 </div>
 </div>
 <div class="metadata">
@@ -254,10 +255,10 @@ window.Quarto = {
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="2" data-listing-file-modified-sort="1722386550591" data-listing-reading-time-sort="5" data-listing-word-count-sort="881">
+<div class="quarto-post image-right" data-index="2" data-categories="project1" data-listing-file-modified-sort="1724131418507" data-listing-reading-time-sort="5" data-listing-word-count-sort="881">
 <div class="thumbnail">
 <p><a href="./pjts/project1-3/index.html" class="no-external"></a></p><a href="./pjts/project1-3/index.html" class="no-external">
-<p class="card-img-top"><img src="pjts\project1-3\index_files\figure-html\cell-13-output-1.png"  class="thumbnail-image card-img"/></p>
+<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
 </a><p><a href="./pjts/project1-3/index.html" class="no-external"></a></p>
 </div>
 <div class="body">
@@ -267,16 +268,13 @@ window.Quarto = {
 <div class="listing-subtitle">
 <a href="./pjts/project1-3/index.html" class="no-external"></a>
 </div>
+<div class="listing-categories">
+<div class="listing-category" onclick="window.quartoListingCategory('project1'); return false;">
+project1
+</div>
+</div>
 <div class="listing-description">
-<a href="./pjts/project1-3/index.html" class="no-external">
-
-<section id="데이터-불러오기" class="level3">
-
-<div id="534d7aab" class="cell" data-execution_count="1">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><span class="im">import</span> pandas <span class="im">as</span> pd</span>
-<span id="cb1-2"><span class="im">import</span> numpy <span class="im">as</span> np</span>
-<span id="cb1-3"><span class="co"># header를 두번째 행으로 고정, 첫번째 행에는 불필요한 정보가 들어있기 때문</span></span>
-<span id="cb1-4">num_trip <span class="op">=</span> pd.read_excel(<span class="st">'C:/Users/USER/Documents/LS빅데이터스쿨/PORTFOLIO/data/R_월별_국내여행…</span><span class="op"></span><span class="dv"></span></span></code></pre></div></div></section><section id="rename을-사용하여-열columns의-변수명-변경" class="level3"><div id="583969ef" class="cell" data-execution_count="2"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><span class="co"></span></span><span id="cb2-2"><span class="op"></span><span class="op"></span><span class="st"></span><span class="st"></span><span class="st"></span><span class="st"></span></span><span id="cb2-3"></span><span id="cb2-4"><span class="co"></span></span><span id="cb2-5"><span class="op"></span><span class="op"></span><span class="st"></span><span class="st"></span></span><span id="cb2-6"></span><span id="cb2-7"><span class="co"></span></span><span id="cb2-8"><span class="op"></span><span class="op"></span><span class="st"></span><span class="st"></span><span class="st"></span><span class="st"></span></span><span id="cb2-9"></span><span id="cb2-10"></span><span id="cb2-11"><span class="co"></span></span><span id="cb2-12"><span class="op"></span><span class="op"></span><span class="st"></span><span class="st"></span><span class="st"></span><span class="st"></span></span><span id="cb2-13"><span class="st"></span><span class="st"></span><span class="st"></span><span class="st"></span></span><span id="cb2-14"></span><span id="cb2-15"><span class="co"></span></span><span id="cb2-16"><span class="op"></span><span class="op"></span><span class="st"></span><span class="st"></span></span><span id="cb2-17"><span class="st"></span><span class="st"></span></span><span id="cb2-18"><span class="st"></span><span class="st"></span></span></code></pre></div></div></section><section id="연령대의-파생변수-생성" class="level3"><div id="01fb8908" class="cell" data-execution_count="3"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><span class="co"></span></span><span id="cb3-2"><span class="st"></span><span class="op"></span><span class="st"></span></span><span id="cb3-3"><span class="st"></span><span class="op"></span><span class="st"></span><span class="op"></span><span class="st"></span></span><span id="cb3-4"><span class="st"></span><span class="op"></span><span class="st"></span><span class="op"></span><span class="st"></span></span><span id="cb3-5"><span class="st"></span><span class="op"></span><span class="st"></span><span class="op"></span><span class="st"></span></span></code></pre></div></div></section><section id="drop을-사용하여-기존의-연령-열-삭제" class="level3"><div id="90c0f0a3" class="cell" data-execution_count="4"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><span class="co"></span></span><span id="cb4-2"><span class="op"></span><span class="dv"></span><span class="dv"></span><span class="dv"></span><span class="op"></span><span class="dv"></span></span></code></pre></div></div></section><section id="가구-소득의-파생변수-생성" class="level3"><div id="e1a2c6c7" class="cell" data-execution_count="5"><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><span class="co"></span></span><span id="cb5-2"><span class="st"></span><span class="op"></span><span class="st"></span><span class="op"></span><span class="st"></span></span><span id="cb5-3"><span class="st"></span><span class="op"></span><span class="st"></span><span class="op"></span><span class="st"></span><span class="op"></span><span class="st"></span></span><span id="cb5-4"><span class="st"></span><span class="op"></span><span class="st"></span><span class="op"></span><span class="st"></span></span><span id="cb5-5"><span class="st"></span><span class="op"></span><span class="st"></span></span></code></pre></div></div></section><section id="drop을-사용하여-기존의-가구-소득-열-삭제" class="level3"><div id="6fc9247d" class="cell" data-execution_count="6"><div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><span class="co"></span></span><span id="cb6-2"><span class="op"></span><span class="dv"></span><span class="dv"></span><span class="dv"></span><span class="op"></span><span class="dv"></span></span></code></pre></div></div></section><section id="직업-열columns-삭제" class="level3"><div id="a8134b8c" class="cell" data-execution_count="7"><div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><span class="co"></span></span><span id="cb7-2"></span><span id="cb7-3"><span class="co"></span></span><span id="cb7-4"><span class="op"></span><span class="dv"></span><span class="dv"></span><span class="dv"></span><span class="op"></span><span class="dv"></span></span></code></pre></div></div><hr></section><section id="연도-결측치-처리" class="level3"><div id="9ffaf2ae" class="cell" data-execution_count="8"><div class="sourceCode cell-code" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><span class="co"></span></span><span id="cb8-2"><span class="st"></span><span class="dv"></span><span class="dv"></span><span class="op"></span><span class="dv"></span></span><span id="cb8-3"><span class="st"></span><span class="dv"></span><span class="dv"></span><span class="op"></span><span class="dv"></span></span><span id="cb8-4"><span class="st"></span><span class="dv"></span><span class="dv"></span><span class="op"></span><span class="dv"></span></span><span id="cb8-5"><span class="st"></span><span class="dv"></span><span class="dv"></span><span class="op"></span><span class="dv"></span></span><span id="cb8-6"><span class="st"></span><span class="dv"></span><span class="dv"></span><span class="op"></span><span class="dv"></span></span><span id="cb8-7"></span><span id="cb8-8"><span class="co"></span></span><span id="cb8-9"><span class="co"></span></span><span id="cb8-10"><span class="co"></span></span><span id="cb8-11"><span class="st"></span><span class="op"></span><span class="st"></span><span class="bu"></span><span class="st"></span><span class="st"></span></span><span id="cb8-12"><span class="st"></span><span class="op"></span><span class="st"></span><span class="st"></span></span></code></pre></div><div class="cell-output cell-output-stderr"><pre><code></code></pre></div></div></section><section id="미응답자-결측치-처리" class="level3"><div id="20544963" class="cell" data-execution_count="9"><div class="sourceCode cell-code" id="cb10"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><span class="co"></span></span><span id="cb10-2"><span class="st"></span><span class="op"></span><span class="st"></span><span class="st"></span><span class="op"></span></span><span id="cb10-3"></span><span id="cb10-4"><span class="co"></span></span><span id="cb10-5"><span class="dv"></span></span></code></pre></div><div class="cell-output cell-output-display" data-execution_count="9"><div><table class="dataframe caption-top table table-sm table-striped small" data-quarto-postprocess="true" data-border="1"><thead><tr class="header"><th data-quarto-table-cell-role="th"></th><th data-quarto-table-cell-role="th"></th><th data-quarto-table-cell-role="th"></th><th data-quarto-table-cell-role="th"></th><th data-quarto-table-cell-role="th"></th><th data-quarto-table-cell-role="th"></th><th data-quarto-table-cell-role="th"></th><th data-quarto-table-cell-role="th"></th><th data-quarto-table-cell-role="th"></th><th data-quarto-table-cell-role="th"></th><th data-quarto-table-cell-role="th"></th><th data-quarto-table-cell-role="th"></th><th data-quarto-table-cell-role="th"></th><th data-quarto-table-cell-role="th"></th><th data-quarto-table-cell-role="th"></th><th data-quarto-table-cell-role="th"></th><th data-quarto-table-cell-role="th"></th><th data-quarto-table-cell-role="th"></th><th data-quarto-table-cell-role="th"></th><th data-quarto-table-cell-role="th"></th><th data-quarto-table-cell-role="th"></th></tr></thead><tbody><tr class="odd"><td data-quarto-table-cell-role="th"></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr class="even"><td data-quarto-table-cell-role="th"></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr class="odd"><td data-quarto-table-cell-role="th"></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr class="even"><td data-quarto-table-cell-role="th"></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr class="odd"><td data-quarto-table-cell-role="th"></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr></tbody></table></div></div></div></section><section id="전처리한-데이터-파일-추출" class="level3"><div id="a2ee1d47" class="cell" data-execution_count="10"><div class="sourceCode cell-code" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><span class="co"></span></span><span id="cb11-2"><span class="co"></span></span><span id="cb11-3"><span class="op"></span><span class="st"></span><span class="op"></span><span class="va"></span></span></code></pre></div></div><hr></section></a>
+<a href="./pjts/project1-3/index.html" class="no-external"></a>
 </div>
 </div>
 <div class="metadata">
@@ -284,10 +282,10 @@ window.Quarto = {
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="3" data-listing-file-modified-sort="1722386566043" data-listing-reading-time-sort="4" data-listing-word-count-sort="789">
+<div class="quarto-post image-right" data-index="3" data-categories="project1" data-listing-file-modified-sort="1724131418523" data-listing-reading-time-sort="4" data-listing-word-count-sort="789">
 <div class="thumbnail">
 <p><a href="./pjts/project1-4/index.html" class="no-external"></a></p><a href="./pjts/project1-4/index.html" class="no-external">
-<p class="card-img-top"><img src="pjts\project1-4\index_files\figure-html\cell-8-output-1.png"  class="thumbnail-image card-img"/></p>
+<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
 </a><p><a href="./pjts/project1-4/index.html" class="no-external"></a></p>
 </div>
 <div class="body">
@@ -297,8 +295,13 @@ window.Quarto = {
 <div class="listing-subtitle">
 <a href="./pjts/project1-4/index.html" class="no-external"></a>
 </div>
+<div class="listing-categories">
+<div class="listing-category" onclick="window.quartoListingCategory('project1'); return false;">
+project1
+</div>
+</div>
 <div class="listing-description">
-<a href="./pjts/project1-4/index.html" class="no-external">5 rows × 27 columns</a>
+<a href="./pjts/project1-4/index.html" class="no-external"></a>
 </div>
 </div>
 <div class="metadata">
@@ -306,25 +309,63 @@ window.Quarto = {
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="4" data-listing-date-sort="1723561200000" data-listing-file-modified-sort="1723613045703" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="6" data-listing-word-count-sort="1148">
+<div class="quarto-post image-right" data-index="4" data-categories="project2" data-listing-date-sort="1724079600000" data-listing-file-modified-sort="1724131525500" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="8" data-listing-word-count-sort="1592">
 <div class="thumbnail">
-<p><a href="./pjts/project2/index.html" class="no-external"></a></p><a href="./pjts/project2/index.html" class="no-external">
+<p><a href="./pjts/project2-2/project2-2.html" class="no-external"></a></p><a href="./pjts/project2-2/project2-2.html" class="no-external">
 <div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
-</a><p><a href="./pjts/project2/index.html" class="no-external"></a></p>
+</a><p><a href="./pjts/project2-2/project2-2.html" class="no-external"></a></p>
 </div>
 <div class="body">
 <h3 class="no-anchor listing-title">
-<a href="./pjts/project2/index.html" class="no-external">Project2 AMES의 교육 관련</a>
+<a href="./pjts/project2-2/project2-2.html" class="no-external">Ames</a>
 </h3>
 <div class="listing-subtitle">
-<a href="./pjts/project2/index.html" class="no-external"></a>
+<a href="./pjts/project2-2/project2-2.html" class="no-external"></a>
+</div>
+<div class="listing-categories">
+<div class="listing-category" onclick="window.quartoListingCategory('project2'); return false;">
+project2
+</div>
 </div>
 <div class="listing-description">
-<a href="./pjts/project2/index.html" class="no-external"></a>
+<a href="./pjts/project2-2/project2-2.html" class="no-external"></a>
 </div>
 </div>
 <div class="metadata">
-<a href="./pjts/project2/index.html" class="no-external">
+<a href="./pjts/project2-2/project2-2.html" class="no-external">
+<div class="listing-date">
+Aug 20, 2024
+</div>
+<div class="listing-author">
+youna
+</div>
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="5" data-categories="project2" data-listing-date-sort="1723561200000" data-listing-file-modified-sort="1724131418507" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="6" data-listing-word-count-sort="1148">
+<div class="thumbnail">
+<p><a href="./pjts/project2-1/index.html" class="no-external"></a></p><a href="./pjts/project2-1/index.html" class="no-external">
+<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
+</a><p><a href="./pjts/project2-1/index.html" class="no-external"></a></p>
+</div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="./pjts/project2-1/index.html" class="no-external">Project2 AMES의 교육 관련</a>
+</h3>
+<div class="listing-subtitle">
+<a href="./pjts/project2-1/index.html" class="no-external"></a>
+</div>
+<div class="listing-categories">
+<div class="listing-category" onclick="window.quartoListingCategory('project2'); return false;">
+project2
+</div>
+</div>
+<div class="listing-description">
+<a href="./pjts/project2-1/index.html" class="no-external"></a>
+</div>
+</div>
+<div class="metadata">
+<a href="./pjts/project2-1/index.html" class="no-external">
 <div class="listing-date">
 Aug 14, 2024
 </div>

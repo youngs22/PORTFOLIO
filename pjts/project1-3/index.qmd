@@ -1,6 +1,7 @@
 ---
 title: "Project1-3. 국내 여행 횟수"
 jupyter: python3
+categories: [project1] 
 ---
 
 ## 데이터 전처리
